@@ -1,24 +1,26 @@
 bootstrap with:
-  - https://github.com/visionmedia/deploy
+  - https://github.com/gerhard/deliver (shell)
+  - https://github.com/visionmedia/deploy (shell)
+  - https://github.com/cmer/shoestrap (shell)
   - https://github.com/tobami/littlechef
   - http://docs.opscode.com/knife_bootstrap.html ?
   - http://projects.puppetlabs.com/projects/1/wiki/bootstrapping_with_puppet
 
 full solutions:
-  - https://github.com/opscode/chef-repo
-  - https://github.com/puppetlabs/puppet
-  - https://github.com/benhoskings/babushka
-  - https://github.com/saltstack/salt
-  - https://github.com/fabric/fabric
+  - http://en.wikipedia.org/wiki/Comparison_of_open_source_configuration_management_software
+  - https://github.com/opscode/chef-repo (ruby)
+  - https://github.com/puppetlabs/puppet (ruby)
+  - https://github.com/benhoskings/babushka (ruby, looks nice)
+  - https://github.com/saltstack/salt (python)
+  - https://github.com/fabric/fabric (python)
     - https://github.com/sebastien/cuisine
-  - https://github.com/cfengine/core
-  - https://github.com/ansible/ansible
-  - https://github.com/telmich/cdist (and boostrapping?)
-  - https://github.com/cmer/shoestrap (and boostrapping?)
+  - https://github.com/cfengine/core (C)
+  - https://github.com/ansible/ansible (python)
+  - https://github.com/git-deploy/git-deploy (perl)
+  - https://github.com/telmich/cdist (python 3)
   - https://github.com/skx/slaughter (perl)
   - https://github.com/linkedin/glu (groovy)
-  - https://github.com/Bcfg2/bcfg2/
-  - http://en.wikipedia.org/wiki/Comparison_of_open_source_configuration_management_software
+  - https://github.com/Bcfg2/bcfg2/ (python)
   - heroku buildpacks?
 
 thoughts:
