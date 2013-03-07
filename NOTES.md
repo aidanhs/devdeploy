@@ -21,9 +21,12 @@ full solutions:
   - https://github.com/skx/slaughter (perl)
   - https://github.com/linkedin/glu (groovy)
   - https://github.com/Bcfg2/bcfg2/ (python)
+  - https://github.com/kenn/sunzi (ruby)
   - heroku buildpacks?
 
 thoughts:
+  - http://unix.stackexchange.com/questions/24802/on-which-unix-distributions-is-python-installed-as-part-of-the-default-install
+    - RHEL (+CentOS), Ubuntu, Debian, OSX all come with Python
   - http://chester.id.au/2012/06/27/a-not-sobrief-aside-on-reigning-in-chaos/
   - http://agiletesting.blogspot.co.uk/2009/11/automated-deployments-with-puppet-and.html
   - vagrant? but inside an lxc?
