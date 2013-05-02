@@ -1,0 +1,15 @@
+#! /bin/sh
+NAME="nodejs"
+DESC="Shim package for installing nodejs"
+REQS=""
+OPTS='
+  { "params": ["gtever", "ltver", "version_mgr"],
+    "defaults": { "gtever": "2.7", "ltver": "3.0" } }
+'
+
+deploy_test () {
+    which node || check
+    node --eval '(function (){\
+                 console.log(this.process.versions.node.split(\".\"));
+                 })()' || check
+}

@@ -1,0 +1,104 @@
+#! /bin/sh
+set -u
+set -e
+
+resolve_deps () {
+    log ""
+}
+
+# This function will
+# - check if the pkg is already deployed
+# - check if the pkg has a deploy function
+# - resolve dependencies
+# - deploy the pkg
+deploy () {
+    local PKG=$1
+    local PARAMS=$2
+    cd pkg
+    log "Checking: $PKG"
+    if (. "./$PKG" && deploy_test); then # > /dev/null); then
+        log "Already deployed: $PKG"
+        return 0
+    elif (. "./$PKG" && !(fn_exists deploy_pkg)); then
+        log "Cannot deploy: $PKG"
+        return 1
+    elif (. "./$PKG" && !(param_check)); then
+        log "Incorrect parameters: $PKG"
+        return 1
+    fi
+    log "Resolving dependencies: $PKG"
+    if (. "./$PKG" && !(resolve_deps "$PKG")); then
+        log "Could not deploy: $PKG"
+        return 1
+    fi
+    log "Deploying: $PKG"
+    if (. "./$PKG" && !(deploy_pkg)); then
+        log "Encountered error deploying: $PKG"
+        return 1
+    fi
+    # Check if deployment failed
+    if !(. "./$PKG" && deploy_test > /dev/null); then
+        log "Deployment failed: $PKG"
+        return 1
+    fi
+    cd ..
+    return 0
+}
+
+############################################################
+############################################################
+
+fn_exists () {
+    type "$1" | grep -q 'function'
+}
+
+log () {
+    echo "$1"
+}
+
+check () {
+    exit 1
+}
+
+############################################################
+############################################################
+
+cmd_help () {
+    log "This is the help function"
+}
+
+cmd_list () {
+    cd pkg
+    for f in *; do
+        echo "$f"
+    done
+    cd ..
+}
+
+cmd_deploy () {
+    # Deploy all the packages on the command line
+    while [ $# != 0 ]; do
+        deploy "$1" "$2"
+        shift 2
+    done
+}
+
+############################################################
+############################################################
+
+if [ $# -ge 1 ] && fn_exists "cmd_$1"; then
+    cmd=$1
+    shift
+    cmd_$cmd "$@"
+else
+    if [ $# -gt 0 ]; then
+        log "Unknown subcommand"
+    fi
+    cmd_help
+fi
+
+
+
+
+
+
