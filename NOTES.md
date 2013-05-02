@@ -25,6 +25,14 @@ full solutions:
   - https://github.com/kenn/sunzi (ruby)
   - heroku buildpacks?
 
+package managers
+  - http://people.debian.org/~dburrows/model.pdf - Modelling and Resolving Software Dependencies
+  - http://bashscripts.org/forum/viewtopic.php?f=8&t=257
+  - http://en.wikipedia.org/wiki/Sourcemage#Sorcery
+  - http://loupgaroublond.blogspot.co.uk/2008/06/do-we-really-need-another-packaging.html
+  - https://www.haiku-os.org/news/2010-12-27_haiku_inc_accepts_contract_relating_package_management
+  - slitaz package manager
+
 on writing shell scripts:
  - https://wiki.ubuntu.com/DashAsBinSh#source
  - http://pubs.opengroup.org/onlinepubs/009695399/utilities/xcu_chap02.html
@@ -64,6 +72,7 @@ to setup on deploy:
     - https://github.com/wayneeseguin/rvm/
     - https://github.com/sstephenson/rbenv/
     - https://github.com/fesplugas/rbenv-installer/ (bootstrap rbenv)
+    - bundler?
   - python:
     - pip
     - virtualenv
