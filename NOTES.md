@@ -20,6 +20,7 @@ full solutions:
   - https://github.com/git-deploy/git-deploy (perl)
   - https://github.com/telmich/cdist (python 3)
   - https://github.com/skx/slaughter (perl)
+  - http://boxen.github.com/ (puppet based, osx only)
   - https://github.com/linkedin/glu (groovy)
   - https://github.com/Bcfg2/bcfg2/ (python)
   - https://github.com/kenn/sunzi (ruby)
