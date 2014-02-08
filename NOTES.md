@@ -60,6 +60,7 @@ thoughts:
   - http://agiletesting.blogspot.co.uk/2009/11/automated-deployments-with-puppet-and.html
   - vagrant? but inside an lxc?
   - https://github.com/devstructure/blueprint
+  - kwatch/versionswitcher
 
 to setup on deploy:
   - homeshick
